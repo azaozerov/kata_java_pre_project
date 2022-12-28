@@ -1,8 +1,5 @@
 package jm.task.core.jdbc.model;
-
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.text.MessageFormat;
 
 @Table
@@ -28,6 +25,7 @@ public class User {
         this.lastName = lastName;
         this.age = age;
     }
+
 
     public Long getId() {
         return id;
