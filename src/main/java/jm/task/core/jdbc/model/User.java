@@ -3,6 +3,7 @@ package jm.task.core.jdbc.model;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.text.MessageFormat;
 
 @Table
 public class User {
@@ -58,5 +59,10 @@ public class User {
 
     public void setAge(Byte age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return MessageFormat.format("User: id = {0}, name = {1}, lastName = {2}, age = {3}", id, name, lastName, age);
     }
 }
